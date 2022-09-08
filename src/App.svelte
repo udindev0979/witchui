@@ -75,8 +75,16 @@
         errs["ageOfDeath"] = "Age Of Death is required";
       }
 
+      if (values.ageOfDeath <= 0) {
+        errs["ageOfDeath"] = "invalid value for age of death";
+      }
+
       if (values.yearOfdeath === 0) {
         errs["yearOfdeath"] = "Year Of Death is required";
+      }
+
+      if (values.yearOfdeath <= 0) {
+        errs["yearOfdeath"] = "invalid value for age of death";
       }
 
       if (values.ageOfDeath >= values.yearOfdeath)  {
